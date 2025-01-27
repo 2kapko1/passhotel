@@ -256,6 +256,7 @@ header {
   height: 100vh;
   align-items: center;
   justify-content: center;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
 header .header-text text {
@@ -361,4 +362,25 @@ footer svg {
 
 footer .socials svg {
   width: 20px;
+}
+
+footer .socials a,
+footer .socials a:visited {
+  color: #222;
+  text-decoration: none;
+}
+
+footer .socials a:hover {
+  text-decoration: underline;
+}
+
+footer .phone-numbers a,
+footer .phone-numbers a:visited,
+footer .phone-numbers a:hover {
+  color: #222;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  opacity: 0.7;
 }
