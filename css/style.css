@@ -264,7 +264,7 @@ header .header-text text {
   font-family: "Exo 2", system-ui;
   font-weight: 300;
   font-style: normal;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 header .header-text text:nth-child(odd) {
