@@ -252,11 +252,17 @@ body {
 
 header {
   color: #090909;
-  display: flex;
   height: 100vh;
+  background: url("/img/background.jpg") no-repeat center center;
+  background-size: cover;
+}
+header div.test {
+  background-color: #ffffff0f;
+  height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+
 }
 
 header .header-text text {
@@ -264,11 +270,11 @@ header .header-text text {
   font-family: "Exo 2", system-ui;
   font-weight: 300;
   font-style: normal;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 header .header-text text:nth-child(odd) {
-  fill: #cfcfcf;
+  fill: #fff;
 }
 
 header .scroll-down-sign {
