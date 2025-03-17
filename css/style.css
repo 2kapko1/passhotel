@@ -325,8 +325,10 @@ section.offer-list h3 {
 section.offer-list img {
   width: 100%;
   height: auto;
+  aspect-ratio: 1/1;
   border-radius: 25px;
   margin: 10px 0;
+  object-fit: cover;
 }
 
 section.offer-list p {
