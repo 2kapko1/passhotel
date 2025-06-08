@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="pl">
 
 <head>
   <meta charset="utf-8">
@@ -7,14 +7,15 @@
   <title>Restauracja Hotelowa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css?v=1">
-  <meta name="description" content="Strona restauracji hotelowej">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <link rel="stylesheet" href="css/style.css?v=2">
+  <meta name="description" content="Strona restauracji hotelowej - bistro, restauracja, hotel i catering w jednym miejscu">
 
   <meta property="og:title" content="Restauracja Hotelowa">
   <meta property="og:type" content="firma, hotel, restauracja">
   <meta property="og:url" content="http://www.passhotel.zebrzydowice.eu/">
   <meta property="og:image" content="/img/meta.png">
-  <meta property=”og:locale” content=”pl_PL” />
+  <meta property="og:locale" content="pl_PL" />
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="icon.png">
@@ -22,128 +23,304 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet">
+          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
 </head>
 
 <body>
-<header>
-  <div class="test">
-  <svg class="header-text" viewBox="0 0 160 90">
-    <text x="80.5" y="25.5" text-anchor="middle" dominant-baseline="middle">BISTRO</text>
-    <text x="80" y="25" text-anchor="middle" dominant-baseline="middle">BISTRO</text>
-    <text x="80.5" y="42.5" text-anchor="middle" dominant-baseline="middle">RESTAURACJA</text>
-    <text x="80" y="42" text-anchor="middle" dominant-baseline="middle">RESTAURACJA</text>
-    <text x="80.5" y="55.5" text-anchor="middle" dominant-baseline="middle">HOTELOWA</text>
-    <text x="80" y="55" text-anchor="middle" dominant-baseline="middle">HOTELOWA</text>
-  </svg>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="scroll-down-sign"><title>chevron-double-down</title><path d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" /></svg>
-  </div>
-</header>
-<section class="offer-list">
+<!-- Nawigacja -->
+<nav class="navbar navbar-expand-lg fixed-top">
   <div class="container">
-    <h2>OFERTA</h2>
+    <a class="navbar-brand" href="#start">PASS HOTEL</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#start">Start</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#bistro">Bistro</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#restauracja">Restauracja</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#hotel">Hotel</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#catering">Catering</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#kontakt">Kontakt</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header / Start -->
+<header id="start" class="parallax-section">
+  <div class="overlay"></div>
+  <div class="container header-content">
+    <div class="row justify-content-center">
+      <div class="col-md-10 text-center">
+        <svg class="header-text" viewBox="0 0 160 90">
+          <text x="80.5" y="25.5" text-anchor="middle" dominant-baseline="middle">BISTRO</text>
+          <text x="80" y="25" text-anchor="middle" dominant-baseline="middle">BISTRO</text>
+          <text x="80.5" y="42.5" text-anchor="middle" dominant-baseline="middle">RESTAURACJA</text>
+          <text x="80" y="42" text-anchor="middle" dominant-baseline="middle">RESTAURACJA</text>
+          <text x="80.5" y="55.5" text-anchor="middle" dominant-baseline="middle">HOTELOWA</text>
+          <text x="80" y="55" text-anchor="middle" dominant-baseline="middle">HOTELOWA</text>
+        </svg>
+        <p class="lead text-white mt-4">Twoje miejsce na wyjątkowe kulinarne doznania i komfortowy wypoczynek</p>
+        <a href="#bistro" class="btn btn-outline-light btn-lg mt-4">Odkryj naszą ofertę</a>
+      </div>
+    </div>
+  </div>
+  <a href="#bistro" class="scroll-down">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="scroll-down-sign">
+      <path d="M16.59,5.59L18,7L12,13L6,7L7.41,5.59L12,10.17L16.59,5.59M16.59,11.59L18,13L12,19L6,13L7.41,11.59L12,16.17L16.59,11.59Z" />
+    </svg>
+  </a>
+</header>
+
+<!-- Bistro Section -->
+<section id="bistro" class="section-padding">
+  <div class="container">
     <div class="row">
-      <div class="col-lg-3 col-md-6 col-12 d-flex flex-column">
-        <h3>BISTRO</h3>
-        <img src="/img/bistro.jpg" alt="bistro">
-        <p>
-          Twoje Ulubione Miejsce na Smaczny Posiłek
-          W naszym bistro łączymy wyśmienitą kuchnię z przyjazną atmosferą.
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+        <div class="section-title">
+          <h2>BISTRO</h2>
+          <div class="divider"></div>
+        </div>
+        <p class="section-description">
+          Twoje Ulubione Miejsce na Smaczny Posiłek. W naszym bistro łączymy wyśmienitą kuchnię z przyjazną atmosferą.
           Nasze menu pełne jest różnorodnych dań, które zadowolą każdego smakosza. Od pysznych obiadów, przez soczyste
-          burgery, aż po aromatyczne makarony i świeże sałatki u nas zawsze znajdziesz coś dla siebie!
+          burgery, aż po aromatyczne makarony i świeże sałatki - u nas zawsze znajdziesz coś dla siebie!
         </p>
-        <div class="d-grid mb-5 mt-auto">
-          <a href="/assets/Passhotel_Bistro_Glowne.pdf" download class="btn btn-light btn-lg mb-3">MENU GŁÓWNE</a>
-          <a href="/assets/Passhotel_Bistro_Skrocone.pdf" download class="btn btn-light btn-lg">MENU SKRÓCONE</a>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a href="/assets/Passhotel_Bistro_Glowne.pdf" download class="btn btn-primary">MENU GŁÓWNE</a>
+          <a href="/assets/Passhotel_Bistro_Skrocone.pdf" download class="btn btn-outline-primary">MENU SKRÓCONE</a>
         </div>
       </div>
-      <div class="col-lg-3 col-md-6 col-12 d-flex flex-column">
-        <h3>RESTAURACJA</h3>
-        <img src="/img/restaurant.jpg" alt="restaurant">
-        <p>
-          Wyjątkowe Miejsce na Twoją Uroczystość.
-          W restauracji hotelowej organizujemy przyjęcia, które pozostają w pamięci na długo.
-          Oferujemy eleganckie wnętrza, wyśmienitą kuchnię i profesjonalną obsługę, idealne na każdą okazję: wesela,
-          urodziny, rocznice, czy spotkania firmowe.
-          Nasze menu to połączenie tradycji z nowoczesnością, starannie przygotowane z najlepszych składników.
-        </p>
-        <div class="d-grid mb-5 mt-auto">
-          <a href="/assets/Passhotel_Menu_Okolicznosciowe.pdf" download class="btn btn-light btn-lg">MENU OKOLICZNOŚCIOWE</a>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-12 d-flex flex-column">
-        <h3>HOTEL</h3>
-        <img src="/img/hotel.jpeg" alt="hotel">
-        <p>
-          W naszym hotelu zapewniamy komfort i wygodę w wyjątkowym otoczeniu. Nasz hotel, zlokalizowany w malowniczej
-          okolicy Podbeskidzia, stanowi doskonałą
-          bazę wypadową do odkrywania uroków regionu,
-          szlaków rowerowych oraz na wyprawy do pobliskich Czech.
-        </p>
-        <div class="d-grid mb-5 mt-auto">
-          <a href="https://www.booking.com/hotel/pl/pass.pl.html" class="btn btn-light btn-lg">PRZEJDŹ DO BOOKING</a>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-6 col-12 d-flex flex-column">
-        <h3>CATERING</h3>
-        <img src="/img/catering.png" alt="catering">
-        <p>
-          Wyjątkowe Smaki na Każdą Okazję
-          W naszej restauracji oferujemy catering, który uświetni każde wydarzenie.
-          Niezależnie od tego, czy organizujesz kameralne spotkanie, rodzinne przyjęcie, czy dużą imprezę firmową, nasza oferta cateringowa
-          spełni wszystkie Twoje oczekiwania.
-        </p>
-        <div class="d-grid mb-5 mt-auto">
-          <a href="/assets/Passhotel_Catering.pdf" download class="btn btn-light btn-lg">POBIERZ CATERING</a>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="img-container">
+          <img src="/img/bistro.jpg" alt="bistro" class="img-fluid rounded shadow">
         </div>
       </div>
     </div>
   </div>
 </section>
-<footer>
+
+<!-- Restauracja Section -->
+<section id="restauracja" class="section-padding bg-light">
   <div class="container">
-    <h2>PASS HOTEL</h2>
-    <div class="text-center footer-links">
-      <a href="/assets/Passhotel_Bistro.pdf" download class="link-dark link-underline-opacity-100-hover">MENU BISTRO</a>
-      <a href="/assets/Passhotel_Menu_Okolicznosciowe.pdf" download class="link-dark link-underline-opacity-100-hover">MENU OKOLICZNOŚCIOWE</a>
-      <a href="https://www.booking.com/hotel/pl/pass.pl.html" class="link-dark link-underline-opacity-100-hover">POKOJE HOTELOWE</a>
-      <a href="/assets/Passhotel_Catering.pdf" download class="link-dark link-underline-opacity-100-hover">CATERING</a>
-    </div>
-    <div class="d-flex justify-content-evenly flex-wrap">
-      <div class="phone-numbers my-2">
-        <div class="d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>cellphone</title><path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z" /></svg>
-          <div>
-            bistro: <a href="tel:+48512301727">512 301 727</a><br>
-            hotel: <a href="tel:+48324758046">32 475 80 46</a><br>
-            manager: <a href="tel:+48519055122">519 055 122</a>
-          </div>
+    <div class="row flex-column-reverse flex-lg-row">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="img-container">
+          <img src="/img/restaurant.jpg" alt="restauracja" class="img-fluid rounded shadow">
         </div>
       </div>
-      <div class="socials my-2">
-        <div class="d-flex">
-          <a href="https://www.facebook.com/Hotelowa">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>facebook</title><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" /></svg>
-            /hotelowa
-          </a>
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-left">
+        <div class="section-title">
+          <h2>RESTAURACJA</h2>
+          <div class="divider"></div>
         </div>
-        <div class="d-flex">
-          <a href="https://www.instagram.com/restauracja.hotelowa2023">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>instagram</title><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z" /></svg>
-            /restauracja.hotelowa2023
-          </a>
-        </div>
-      </div>
-      <div class="my-2">
-        <div class="d-flex align-items-center">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>map-marker-radius-outline</title><path d="M12 4C14.2 4 16 5.8 16 8C16 10.1 13.9 13.5 12 15.9C10.1 13.4 8 10.1 8 8C8 5.8 9.8 4 12 4M12 2C8.7 2 6 4.7 6 8C6 12.5 12 19 12 19S18 12.4 18 8C18 4.7 15.3 2 12 2M12 6C10.9 6 10 6.9 10 8S10.9 10 12 10 14 9.1 14 8 13.1 6 12 6M20 19C20 21.2 16.4 23 12 23S4 21.2 4 19C4 17.7 5.2 16.6 7.1 15.8L7.7 16.7C6.7 17.2 6 17.8 6 18.5C6 19.9 8.7 21 12 21S18 19.9 18 18.5C18 17.8 17.3 17.2 16.2 16.7L16.8 15.8C18.8 16.6 20 17.7 20 19Z" /></svg>
-        Kochanowskiego 39<br>
-        43-410 Zebrzydowice
+        <p class="section-description">
+          Wyjątkowe Miejsce na Twoją Uroczystość. W restauracji hotelowej organizujemy przyjęcia, które pozostają w pamięci na długo.
+          Oferujemy eleganckie wnętrza, wyśmienitą kuchnię i profesjonalną obsługę, idealne na każdą okazję: wesela,
+          urodziny, rocznice, czy spotkania firmowe. Nasze menu to połączenie tradycji z nowoczesnością, starannie przygotowane z najlepszych składników.
+        </p>
+        <div class="mt-4">
+          <a href="/assets/Passhotel_Menu_Okolicznosciowe.pdf" download class="btn btn-primary">MENU OKOLICZNOŚCIOWE</a>
         </div>
       </div>
     </div>
   </div>
+</section>
+
+<!-- Hotel Section -->
+<section id="hotel" class="section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+        <div class="section-title">
+          <h2>HOTEL</h2>
+          <div class="divider"></div>
+        </div>
+        <p class="section-description">
+          W naszym hotelu zapewniamy komfort i wygodę w wyjątkowym otoczeniu. Nasz hotel, zlokalizowany w malowniczej
+          okolicy Podbeskidzia, stanowi doskonałą bazę wypadową do odkrywania uroków regionu,
+          szlaków rowerowych oraz na wyprawy do pobliskich Czech.
+        </p>
+        <div class="mt-4">
+          <a href="https://www.booking.com/hotel/pl/pass.pl.html" class="btn btn-primary">ZAREZERWUJ POBYT</a>
+        </div>
+      </div>
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="img-container">
+          <img src="/img/hotel.jpeg" alt="hotel" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Catering Section -->
+<section id="catering" class="section-padding bg-light">
+  <div class="container">
+    <div class="row flex-column-reverse flex-lg-row">
+      <div class="col-lg-6" data-aos="fade-right">
+        <div class="img-container">
+          <img src="/img/catering.png" alt="catering" class="img-fluid rounded shadow">
+        </div>
+      </div>
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-left">
+        <div class="section-title">
+          <h2>CATERING</h2>
+          <div class="divider"></div>
+        </div>
+        <p class="section-description">
+          Wyjątkowe Smaki na Każdą Okazję. W naszej restauracji oferujemy catering, który uświetni każde wydarzenie.
+          Niezależnie od tego, czy organizujesz kameralne spotkanie, rodzinne przyjęcie, czy dużą imprezę firmową, nasza oferta cateringowa
+          spełni wszystkie Twoje oczekiwania.
+        </p>
+        <div class="mt-4">
+          <a href="/assets/Passhotel_Catering.pdf" download class="btn btn-primary">POBIERZ OFERTĘ CATERINGOWĄ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Kontakt Section -->
+<section id="kontakt" class="section-padding">
+  <div class="container">
+    <div class="row text-center">
+      <div class="col-12">
+        <div class="section-title">
+          <h2>KONTAKT</h2>
+          <div class="divider mx-auto"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+        <div class="contact-box text-center">
+          <div class="icon-container mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z" /></svg>
+          </div>
+          <h4>Telefon</h4>
+          <p>bistro: <a href="tel:+48512301727">512 301 727</a></p>
+          <p>hotel: <a href="tel:+48324758046">32 475 80 46</a></p>
+          <p>manager: <a href="tel:+48519055122">519 055 122</a></p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="contact-box text-center">
+          <div class="icon-container mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4C14.2 4 16 5.8 16 8C16 10.1 13.9 13.5 12 15.9C10.1 13.4 8 10.1 8 8C8 5.8 9.8 4 12 4M12 2C8.7 2 6 4.7 6 8C6 12.5 12 19 12 19S18 12.4 18 8C18 4.7 15.3 2 12 2M12 6C10.9 6 10 6.9 10 8S10.9 10 12 10 14 9.1 14 8 13.1 6 12 6M20 19C20 21.2 16.4 23 12 23S4 21.2 4 19C4 17.7 5.2 16.6 7.1 15.8L7.7 16.7C6.7 17.2 6 17.8 6 18.5C6 19.9 8.7 21 12 21S18 19.9 18 18.5C18 17.8 17.3 17.2 16.2 16.7L16.8 15.8C18.8 16.6 20 17.7 20 19Z" /></svg>
+          </div>
+          <h4>Adres</h4>
+          <p>Kochanowskiego 39<br>43-410 Zebrzydowice</p>
+          <a href="https://maps.google.com/?q=Kochanowskiego+39,+43-410+Zebrzydowice" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Zobacz na mapie</a>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="contact-box text-center">
+          <div class="icon-container mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" /></svg>
+          </div>
+          <h4>Social Media</h4>
+          <p>
+            <a href="https://www.facebook.com/Hotelowa" target="_blank" class="social-link">Facebook</a>
+          </p>
+          <p>
+            <a href="https://www.instagram.com/restauracja.hotelowa2023" target="_blank" class="social-link">Instagram</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h4>PASS HOTEL</h4>
+        <p>Twoje miejsce na wyjątkowe kulinarne doznania i komfortowy wypoczynek w malowniczej okolicy Podbeskidzia.</p>
+      </div>
+      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+        <h4>Szybkie linki</h4>
+        <ul class="footer-links">
+          <li><a href="/assets/Passhotel_Bistro_Glowne.pdf" download>MENU BISTRO</a></li>
+          <li><a href="/assets/Passhotel_Menu_Okolicznosciowe.pdf" download>MENU OKOLICZNOŚCIOWE</a></li>
+          <li><a href="https://www.booking.com/hotel/pl/pass.pl.html">POKOJE HOTELOWE</a></li>
+          <li><a href="/assets/Passhotel_Catering.pdf" download>CATERING</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4 col-md-12">
+        <h4>Godziny otwarcia</h4>
+        <ul class="hours-list">
+          <li>Poniedziałek - Piątek: 11:00 - 22:00</li>
+          <li>Sobota: 12:00 - 23:00</li>
+          <li>Niedziela: 12:00 - 21:00</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <p class="copyright">© 2025 PASS HOTEL. Wszelkie prawa zastrzeżone.</p>
+      </div>
+    </div>
+  </div>
 </footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Inicjalizacja AOS (Animate On Scroll)
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Płynne przewijanie do sekcji
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 70,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+
+    // Zmiana tła nawigacji przy przewijaniu
+    const navbar = document.querySelector('.navbar');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 100) {
+        navbar.classList.add('navbar-scrolled');
+      } else {
+        navbar.classList.remove('navbar-scrolled');
+      }
+    });
+  });
+</script>
 </body>
 </html>
