@@ -3,6 +3,8 @@
   --secondary-color: #333;
   --light-color: #f8f9fa;
   --dark-color: #212529;
+  --bs-btn-active-bg: #333;
+  --bs-btn-active-border-color: #333;
   --font-primary: 'Exo 2', sans-serif;
   --font-secondary: 'Alegreya Sans', sans-serif;
 }
@@ -125,23 +127,22 @@ header {
   font-size: 20px;
 }
 
-.header-text text:nth-child(odd) {
-  fill: var(--primary-color);
+.navbar:not(.navbar-scrolled) .nav-link:focus,
+.navbar:not(.navbar-scrolled) .nav-link:hover {
+  color: var(--light-color);
 }
 
-.scroll-down {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 2;
-  animation: bounce 2s infinite;
+.navbar-scrolled .navbar-toggler-icon {
+  filter: unset;
 }
 
-.scroll-down-sign {
-  width: 40px;
-  height: 40px;
-  fill: white;
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.fixed-top {
+  right: unset;
+  width: 100%;
 }
 
 @keyframes bounce {
@@ -194,6 +195,7 @@ header {
 .img-container img {
   transition: transform 0.5s ease;
   width: 100%;
+  max-height: 400px;
   height: auto;
   object-fit: cover;
 }
@@ -211,17 +213,22 @@ header {
 }
 
 .btn-primary {
+  --bs-btn-active-bg: var(--secondary-color);
+  --bs-btn-active-border-color: var(--secondary-color);
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
 
 .btn-primary:hover, .btn-primary:focus {
-  background-color: darken(var(--primary-color), 10%);
-  border-color: darken(var(--primary-color), 10%);
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
   box-shadow: 0 5px 15px rgba(168, 125, 50, 0.3);
 }
 
 .btn-outline-primary {
+  --bs-btn-active-bg: #fff;
+  --bs-btn-active-color: var(--secondary-color);
+  --bs-btn-active-border-color: var(--secondary-color);
   color: var(--primary-color);
   border-color: var(--primary-color);
 }
