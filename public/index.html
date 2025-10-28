@@ -5,16 +5,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Restauracja Hotelowa</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css?v=2">
-  <meta name="description" content="Strona restauracji hotelowej - bistro, restauracja, hotel i catering w jednym miejscu">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description"
+        content="Strona restauracji hotelowej - bistro, restauracja, hotel i catering w jednym miejscu">
 
   <meta property="og:title" content="Restauracja Hotelowa">
   <meta property="og:type" content="firma, hotel, restauracja">
   <meta property="og:url" content="http://www.passhotel.zebrzydowice.eu/">
-  <meta property="og:image" content="./img/meta.png">
-  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:image" content="/img/meta.png">
+  <meta property="og:locale" content="pl_PL"/>
 
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="icon.png">
@@ -22,84 +22,114 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-          href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
-          rel="stylesheet">
+    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
-<body>
+<body class="font-body text-dark">
 <!-- Nawigacja -->
-<nav class="navbar navbar-expand-lg fixed-top">
-  <div class="container-fluid px-3">
-    <a class="navbar-brand" href="#start">PASS HOTEL</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+<nav id="navbar" class="fixed top-0 w-full z-50 transition-all bg-white/95">
+  <div class="container mx-auto px-3 flex items-center justify-between py-5">
+    <a class="text-black font-heading text-2xl tracking-wide" href="#start">PASS HOTEL</a>
+    <button id="nav-toggle"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-md text-black lg:hidden"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+           stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="#start">Start</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#bistro">Bistro</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#restauracja">Restauracja</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#hotel">Hotel</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#catering">Catering</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#kontakt">Kontakt</a>
-        </li>
+    <div id="navbarNav" class="hidden w-full lg:w-auto lg:flex lg:items-center flex-grow-0">
+      <ul class="flex flex-col lg:flex-row lg:ml-auto gap-2 lg:gap-4 nav-links">
+        <li><a href="#bistro">Bistro</a></li>
+        <li><a href="#restauracja">Restauracja</a></li>
+        <li><a href="#hotel">Hotel</a></li>
+        <li><a href="#catering">Catering</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- Header / Start -->
-<header id="start" class="parallax-section">
-  <div class="overlay"></div>
-  <div class="container header-content">
-    <div class="row justify-content-center">
-      <div class="col-md-10 text-center">
-        <svg class="header-text" viewBox="0 0 160 90">
-          <text x="80" y="28" text-anchor="middle" dominant-baseline="middle">BISTRO</text>
-          <text x="80" y="45" text-anchor="middle" dominant-baseline="middle">RESTAURACJA</text>
-          <text x="80" y="62" text-anchor="middle" dominant-baseline="middle">HOTELOWA</text>
-        </svg>
-        <p class="lead text-white mt-4">Twoje miejsce na wyjątkowe kulinarne doznania i komfortowy wypoczynek</p>
-        <a href="#bistro" class="btn btn-outline-light btn-lg mt-4">Odkryj naszą ofertę</a>
+<header id="start" class="relative min-h-screen flex items-center bg-gradient-to-b from-white to-gray-50">
+  <div class="container mx-auto px-4 py-24">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <!-- Left: Text -->
+      <div class="max-w-xl" data-aos="fade-right">
+        <span
+          class="inline-flex items-center gap-2 text-brand font-semibold tracking-wide uppercase">Witaj w Pass Hotel</span>
+        <h1 class="font-heading text-4xl md:text-5xl font-bold leading-tight mt-3">Restauracja i Hotel w sercu
+          Zebrzydowic</h1>
+        <p class="mt-4 text-lg text-gray-700">Twoje miejsce na wyjątkowe kulinarne doznania i komfortowy wypoczynek.
+          Zapraszamy na śniadania, lunche i kolacje w przytulnej atmosferze oraz noclegi w wygodnych pokojach.</p>
+        <div class="mt-6 flex flex-wrap gap-3">
+          <a href="#bistro" class="inline-block bg-brand text-white hover:bg-secondary font-semibold px-6 py-3 rounded">Zobacz
+            menu</a>
+          <a href="#hotel"
+             class="inline-block border border-brand text-brand hover:bg-brand hover:text-white font-semibold px-6 py-3 rounded">Zarezerwuj
+            pobyt</a>
+        </div>
+      </div>
+      <!-- Right: Images (subtly staggered grid on desktop, neat grid on mobile) -->
+      <div class="lg:pl-4" data-aos="fade-left">
+        <!-- Mobile/tablet: simple, equal tiles; Desktop (lg+): slight stagger and varied heights -->
+        <div class="grid grid-cols-2 gap-3 sm:gap-4">
+          <!-- Top-left: slightly lower on desktop -->
+          <div class="overflow-hidden rounded-lg shadow aspect-[4/3] lg:aspect-auto lg:h-64 lg:mt-6">
+            <img loading="lazy" src="./img/hero_1.jpg" alt="Pass Hotel 1"
+                 class="w-full h-full object-cover transition-transform duration-500 will-change-transform hover:scale-105">
+          </div>
+          <!-- Top-right: a bit higher and taller -->
+          <div class="overflow-hidden rounded-lg shadow aspect-[4/3] lg:aspect-auto lg:h-72 lg:-mt-3">
+            <img loading="lazy" src="./img/hero_2.jpg" alt="Pass Hotel 2"
+                 class="w-full h-full object-cover transition-transform duration-500 will-change-transform hover:scale-105">
+          </div>
+          <!-- Bottom-left: longest to create gentle emphasis -->
+          <div class="overflow-hidden rounded-lg shadow aspect-[4/3] lg:aspect-auto lg:h-80">
+            <img loading="lazy" src="./img/hero_3.jpg" alt="Pass Hotel 3"
+                 class="w-full h-full object-cover transition-transform duration-500 will-change-transform hover:scale-105">
+          </div>
+          <!-- Bottom-right: medium height with small offset -->
+          <div class="overflow-hidden rounded-lg shadow aspect-[4/3] lg:aspect-auto lg:h-72">
+            <img loading="lazy" src="./img/hero_4.jpg" alt="Pass Hotel 4"
+                 class="w-full h-full object-cover transition-transform duration-500 will-change-transform hover:scale-105">
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
 <!-- Bistro Section -->
-<section id="bistro" class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-        <div class="section-title">
-          <h2>BISTRO</h2>
-          <div class="divider"></div>
-        </div>
-        <p class="section-description">
-          Twoje Ulubione Miejsce na Smaczny Posiłek. W naszym bistro łączymy wyśmienitą kuchnię z przyjazną atmosferą.
-          Nasze menu pełne jest różnorodnych dań, które zadowolą każdego smakosza. Od pysznych obiadów, przez soczyste
-          burgery, aż po aromatyczne makarony i świeże sałatki - u nas zawsze znajdziesz coś dla siebie!
-        </p>
-        <div class="d-flex flex-wrap gap-3 mt-4">
-          <a href="./assets/Passhotel_Bistro_Glowne.pdf" download class="btn btn-primary">MENU GŁÓWNE</a>
-          <a href="./assets/Passhotel_Bistro_Skrocone.pdf" download class="btn btn-outline-primary">MENU SKRÓCONE</a>
+<section id="bistro" class="py-24 md:py-28">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div data-aos="fade-left">
+        <div class="overflow-hidden rounded-lg shadow group">
+          <img src="./img/bistro.jpg" alt="bistro"
+               class="w-full h-auto max-h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
         </div>
       </div>
-      <div class="col-lg-6" data-aos="fade-left">
-        <div class="img-container">
-          <img src="./img/bistro.jpg" alt="bistro" class="img-fluid rounded shadow">
+      <div class="mb-8 lg:mb-0" data-aos="fade-right">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold">BISTRO</h2>
+          <div class="w-16 h-1 bg-brand mt-3 mb-6"></div>
+        </div>
+        <p class="section-description">
+          Twoje Ulubione Miejsce na Smaczny Posiłek. W naszym bistro łączymy wyśmienitą kuchnię z przyjazną
+          atmosferą.
+          Nasze menu pełne jest różnorodnych dań, które zadowolą każdego smakosza. Od pysznych obiadów, przez
+          soczyste
+          burgery, aż po aromatyczne makarony i świeże sałatki - u nas zawsze znajdziesz coś dla siebie!
+        </p>
+        <div class="flex flex-wrap gap-3 mt-4">
+          <a href="./assets/Passhotel_Bistro_Glowne.pdf" download
+             class="inline-block bg-brand text-white hover:bg-secondary font-semibold px-5 py-2 rounded">MENU
+            GŁÓWNE</a>
+          <a href="./assets/Passhotel_Bistro_Skrocone.pdf" download
+             class="inline-block border border-brand text-brand hover:bg-brand hover:text-white font-semibold px-5 py-2 rounded">MENU
+            SKRÓCONE</a>
         </div>
       </div>
     </div>
@@ -107,26 +137,32 @@
 </section>
 
 <!-- Restauracja Section -->
-<section id="restauracja" class="section-padding bg-light">
-  <div class="container">
-    <div class="row flex-column-reverse flex-lg-row">
-      <div class="col-lg-6" data-aos="fade-right">
-        <div class="img-container">
-          <img src="./img/restaurant.jpg" alt="restauracja" class="img-fluid rounded shadow">
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-left">
-        <div class="section-title">
-          <h2>RESTAURACJA</h2>
-          <div class="divider"></div>
+<section id="restauracja" class="py-24 md:py-28 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="mb-8 lg:mb-0" data-aos="fade-left">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold">RESTAURACJA</h2>
+          <div class="w-16 h-1 bg-brand mt-3 mb-6"></div>
         </div>
         <p class="section-description">
-          Wyjątkowe Miejsce na Twoją Uroczystość. W restauracji hotelowej organizujemy przyjęcia, które pozostają w pamięci na długo.
-          Oferujemy eleganckie wnętrza, wyśmienitą kuchnię i profesjonalną obsługę, idealne na każdą okazję: wesela,
-          urodziny, rocznice, czy spotkania firmowe. Nasze menu to połączenie tradycji z nowoczesnością, starannie przygotowane z najlepszych składników.
+          Wyjątkowe Miejsce na Twoją Uroczystość. W restauracji hotelowej organizujemy przyjęcia, które
+          pozostają w pamięci na długo.
+          Oferujemy eleganckie wnętrza, wyśmienitą kuchnię i profesjonalną obsługę, idealne na każdą okazję:
+          wesela,
+          urodziny, rocznice, czy spotkania firmowe. Nasze menu to połączenie tradycji z nowoczesnością,
+          starannie przygotowane z najlepszych składników.
         </p>
         <div class="mt-4">
-          <a href="./assets/Passhotel_Menu_Okolicznosciowe.pdf" download class="btn btn-primary">MENU OKOLICZNOŚCIOWE</a>
+          <a href="./assets/Passhotel_Menu_Okolicznosciowe.pdf" download
+             class="inline-block bg-brand text-white hover:bg-secondary font-semibold px-5 py-2 rounded">MENU
+            OKOLICZNOŚCIOWE</a>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <div class="overflow-hidden rounded-lg shadow group">
+          <img src="./img/restaurant.jpg" alt="bistro"
+               class="w-full h-auto max-h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
         </div>
       </div>
     </div>
@@ -134,26 +170,30 @@
 </section>
 
 <!-- Hotel Section -->
-<section id="hotel" class="section-padding">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-        <div class="section-title">
-          <h2>HOTEL</h2>
-          <div class="divider"></div>
+<section id="hotel" class="py-24 md:py-28">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div data-aos="fade-left">
+        <div class="overflow-hidden rounded-lg shadow group">
+          <img src="./img/hotel.jpeg" alt="bistro"
+               class="w-full h-auto max-h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+      </div>
+      <div class="mb-8 lg:mb-0" data-aos="fade-right">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold">HOTEL</h2>
+          <div class="w-16 h-1 bg-brand mt-3 mb-6"></div>
         </div>
         <p class="section-description">
-          W naszym hotelu zapewniamy komfort i wygodę w wyjątkowym otoczeniu. Nasz hotel, zlokalizowany w malowniczej
+          W naszym hotelu zapewniamy komfort i wygodę w wyjątkowym otoczeniu. Nasz hotel, zlokalizowany w
+          malowniczej
           okolicy Podbeskidzia, stanowi doskonałą bazę wypadową do odkrywania uroków regionu,
           szlaków rowerowych oraz na wyprawy do pobliskich Czech.
         </p>
         <div class="mt-4">
-          <a href="https://www.booking.com/hotel/pl/pass.pl.html" class="btn btn-primary">ZAREZERWUJ POBYT</a>
-        </div>
-      </div>
-      <div class="col-lg-6" data-aos="fade-left">
-        <div class="img-container">
-          <img src="./img/hotel.jpeg" alt="hotel" class="img-fluid rounded shadow">
+          <a href="https://www.booking.com/hotel/pl/pass.pl.html"
+             class="inline-block bg-[var(--primary-color)] text-white hover:bg-[var(--secondary-color)] font-semibold px-5 py-2 rounded">ZAREZERWUJ
+            POBYT</a>
         </div>
       </div>
     </div>
@@ -161,26 +201,31 @@
 </section>
 
 <!-- Catering Section -->
-<section id="catering" class="section-padding bg-light">
-  <div class="container">
-    <div class="row flex-column-reverse flex-lg-row">
-      <div class="col-lg-6" data-aos="fade-right">
-        <div class="img-container">
-          <img src="./img/catering.png" alt="catering" class="img-fluid rounded shadow">
-        </div>
-      </div>
-      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-left">
-        <div class="section-title">
-          <h2>CATERING</h2>
-          <div class="divider"></div>
+<section id="catering" class="py-24 md:py-28 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div class="mb-8 lg:mb-0" data-aos="fade-left">
+        <div>
+          <h2 class="font-heading text-3xl md:text-4xl font-bold">CATERING</h2>
+          <div class="w-16 h-1 bg-brand mt-3 mb-6"></div>
         </div>
         <p class="section-description">
-          Wyjątkowe Smaki na Każdą Okazję. W naszej restauracji oferujemy catering, który uświetni każde wydarzenie.
-          Niezależnie od tego, czy organizujesz kameralne spotkanie, rodzinne przyjęcie, czy dużą imprezę firmową, nasza oferta cateringowa
+          Wyjątkowe Smaki na Każdą Okazję. W naszej restauracji oferujemy catering, który uświetni każde
+          wydarzenie.
+          Niezależnie od tego, czy organizujesz kameralne spotkanie, rodzinne przyjęcie, czy dużą imprezę
+          firmową, nasza oferta cateringowa
           spełni wszystkie Twoje oczekiwania.
         </p>
         <div class="mt-4">
-          <a href="./assets/Passhotel_Catering.pdf" download class="btn btn-primary">POBIERZ OFERTĘ CATERINGOWĄ</a>
+          <a href="./assets/Passhotel_Catering.pdf" download
+             class="inline-block bg-brand text-white hover:bg-secondary font-semibold px-5 py-2 rounded">POBIERZ
+            OFERTĘ CATERINGOWĄ</a>
+        </div>
+      </div>
+      <div data-aos="fade-left">
+        <div class="overflow-hidden rounded-lg shadow group">
+          <img src="./img/catering.png" alt="bistro"
+               class="w-full h-auto max-h-[400px] object-cover transition-transform duration-500 group-hover:scale-105">
         </div>
       </div>
     </div>
@@ -188,21 +233,24 @@
 </section>
 
 <!-- Kontakt Section -->
-<section id="kontakt" class="section-padding">
-  <div class="container">
-    <div class="row text-center">
-      <div class="col-12">
-        <div class="section-title">
+<section id="kontakt" class="py-24 md:py-28">
+  <div class="container mx-auto px-4">
+    <div class="text-center">
+      <div>
+        <div>
           <h2>KONTAKT</h2>
           <div class="divider mx-auto"></div>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center mt-5">
-      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up">
+    <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
+      <div class="" data-aos="fade-up">
         <div class="contact-box text-center">
           <div class="icon-container mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z"/>
+            </svg>
           </div>
           <h4>Telefon</h4>
           <p>bistro: <a href="tel:+48512301727">512 301 727</a></p>
@@ -210,27 +258,36 @@
           <p>manager: <a href="tel:+48519055122">519 055 122</a></p>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="" data-aos="fade-up" data-aos-delay="100">
         <div class="contact-box text-center">
           <div class="icon-container mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 4C14.2 4 16 5.8 16 8C16 10.1 13.9 13.5 12 15.9C10.1 13.4 8 10.1 8 8C8 5.8 9.8 4 12 4M12 2C8.7 2 6 4.7 6 8C6 12.5 12 19 12 19S18 12.4 18 8C18 4.7 15.3 2 12 2M12 6C10.9 6 10 6.9 10 8S10.9 10 12 10 14 9.1 14 8 13.1 6 12 6M20 19C20 21.2 16.4 23 12 23S4 21.2 4 19C4 17.7 5.2 16.6 7.1 15.8L7.7 16.7C6.7 17.2 6 17.8 6 18.5C6 19.9 8.7 21 12 21S18 19.9 18 18.5C18 17.8 17.3 17.2 16.2 16.7L16.8 15.8C18.8 16.6 20 17.7 20 19Z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 4C14.2 4 16 5.8 16 8C16 10.1 13.9 13.5 12 15.9C10.1 13.4 8 10.1 8 8C8 5.8 9.8 4 12 4M12 2C8.7 2 6 4.7 6 8C6 12.5 12 19 12 19S18 12.4 18 8C18 4.7 15.3 2 12 2M12 6C10.9 6 10 6.9 10 8S10.9 10 12 10 14 9.1 14 8 13.1 6 12 6M20 19C20 21.2 16.4 23 12 23S4 21.2 4 19C4 17.7 5.2 16.6 7.1 15.8L7.7 16.7C6.7 17.2 6 17.8 6 18.5C6 19.9 8.7 21 12 21S18 19.9 18 18.5C18 17.8 17.3 17.2 16.2 16.7L16.8 15.8C18.8 16.6 20 17.7 20 19Z"/>
+            </svg>
           </div>
           <h4>Adres</h4>
           <p>Kochanowskiego 39<br>43-410 Zebrzydowice</p>
-          <a href="https://maps.google.com/?q=Kochanowskiego+39,+43-410+Zebrzydowice" target="_blank" class="btn btn-sm btn-outline-primary mt-2">Zobacz na mapie</a>
+          <a href="https://maps.google.com/?q=Kochanowskiego+39,+43-410+Zebrzydowice" target="_blank"
+             class="inline-block mt-2 border border-brand text-brand hover:bg-brand hover:text-white text-sm font-semibold px-4 py-2 rounded">Zobacz
+            na mapie</a>
         </div>
       </div>
       <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
         <div class="contact-box text-center">
           <div class="icon-container mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+            </svg>
           </div>
           <h4>Social Media</h4>
           <p>
             <a href="https://www.facebook.com/Hotelowa" target="_blank" class="social-link">Facebook</a>
           </p>
           <p>
-            <a href="https://www.instagram.com/restauracja.hotelowa2023" target="_blank" class="social-link">Instagram</a>
+            <a href="https://www.instagram.com/restauracja.hotelowa2023" target="_blank"
+               class="social-link">Instagram</a>
           </p>
         </div>
       </div>
@@ -240,11 +297,12 @@
 
 <!-- Footer -->
 <footer>
-  <div class="container">
-    <div class="row">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
         <h4>PASS HOTEL</h4>
-        <p>Jesteśmy miejscem, gdzie wyśmienite jedzenie spotyka się z wyjątkową atmosferą. Odkryj nasze perfekcyjne
+        <p>Jesteśmy miejscem, gdzie wyśmienite jedzenie spotyka się z wyjątkową atmosferą. Odkryj nasze
+          perfekcyjne
           dania i delektuj się niezapomnianymi chwilami w naszej restauracji.</p>
       </div>
       <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
@@ -276,9 +334,10 @@
 
 <!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     // Płynne przewijanie do sekcji
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -295,15 +354,6 @@
       });
     });
 
-    // Zmiana tła nawigacji przy przewijaniu
-    const navbar = document.querySelector('.navbar');
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 100) {
-        navbar.classList.add('navbar-scrolled');
-      } else {
-        navbar.classList.remove('navbar-scrolled');
-      }
-    });
   });
 </script>
 </body>
