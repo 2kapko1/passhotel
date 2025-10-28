@@ -29,7 +29,7 @@
 <body class="font-body text-dark">
 <!-- Nawigacja -->
 <nav id="navbar" class="fixed top-0 w-full z-50 transition-all bg-white/95">
-  <div class="container mx-auto px-3 flex items-center justify-between py-5">
+  <div class="container mx-auto px-3 flex items-center justify-between py-5 relative">
     <a class="text-black font-heading text-2xl tracking-wide" href="#start">PASS HOTEL</a>
     <button id="nav-toggle"
             class="inline-flex items-center justify-center w-10 h-10 rounded-md text-black lg:hidden"
@@ -39,7 +39,7 @@
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
-    <div id="navbarNav" class="hidden w-full lg:w-auto lg:flex lg:items-center flex-grow-0">
+    <div id="navbarNav" class="hidden absolute top-full left-0 right-0 bg-white border-t border-gray-200 shadow-md mt-2 px-3 py-3 w-full lg:static lg:w-auto lg:flex lg:items-center lg:bg-transparent lg:border-0 lg:shadow-none lg:mt-0 lg:px-0 lg:py-0 flex-grow-0">
       <ul class="flex flex-col lg:flex-row lg:ml-auto gap-2 lg:gap-4 nav-links">
         <li><a href="#bistro">Bistro</a></li>
         <li><a href="#restauracja">Restauracja</a></li>
@@ -233,62 +233,55 @@
 </section>
 
 <!-- Kontakt Section -->
-<section id="kontakt" class="py-24 md:py-28">
+<section id="kontakt" class="py-10">
   <div class="container mx-auto px-4">
     <div class="text-center">
-      <div>
-        <div>
-          <h2>KONTAKT</h2>
-          <div class="divider mx-auto"></div>
-        </div>
-      </div>
+      <h2 class="font-heading text-3xl md:text-4xl font-bold">KONTAKT</h2>
+      <div class="w-16 h-1 bg-brand mx-auto mt-3"></div>
     </div>
-    <div class="mt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 justify-center">
-      <div class="" data-aos="fade-up">
-        <div class="contact-box text-center">
-          <div class="icon-container mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z"/>
+
+    <div class="mt-8 grid auto-rows-fr grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <!-- Telefon -->
+      <div data-aos="fade-up" class="">
+        <div class="h-full flex flex-col text-center rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mx-auto text-brand fill-current">
+              <path d="M17,19H7V5H17M17,1H7C5.89,1 5,1.89 5,3V21A2,2 0 0,0 7,23H17A2,2 0 0,0 19,21V3C19,1.89 18.1,1 17,1Z"/>
             </svg>
           </div>
-          <h4>Telefon</h4>
-          <p>bistro: <a href="tel:+48512301727">512 301 727</a></p>
-          <p>hotel: <a href="tel:+48324758046">32 475 80 46</a></p>
-          <p>manager: <a href="tel:+48519055122">519 055 122</a></p>
+          <h4 class="font-heading text-xl font-semibold mb-2">Telefon</h4>
+          <p class="text-gray-700">bistro: <a class="text-brand hover:underline" href="tel:+48512301727">512 301 727</a></p>
+          <p class="text-gray-700">hotel: <a class="text-brand hover:underline" href="tel:+48324758046">32 475 80 46</a></p>
+          <p class="text-gray-700">manager: <a class="text-brand hover:underline" href="tel:+48519055122">519 055 122</a></p>
         </div>
       </div>
-      <div class="" data-aos="fade-up" data-aos-delay="100">
-        <div class="contact-box text-center">
-          <div class="icon-container mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M12 4C14.2 4 16 5.8 16 8C16 10.1 13.9 13.5 12 15.9C10.1 13.4 8 10.1 8 8C8 5.8 9.8 4 12 4M12 2C8.7 2 6 4.7 6 8C6 12.5 12 19 12 19S18 12.4 18 8C18 4.7 15.3 2 12 2M12 6C10.9 6 10 6.9 10 8S10.9 10 12 10 14 9.1 14 8 13.1 6 12 6M20 19C20 21.2 16.4 23 12 23S4 21.2 4 19C4 17.7 5.2 16.6 7.1 15.8L7.7 16.7C6.7 17.2 6 17.8 6 18.5C6 19.9 8.7 21 12 21S18 19.9 18 18.5C18 17.8 17.3 17.2 16.2 16.7L16.8 15.8C18.8 16.6 20 17.7 20 19Z"/>
+
+      <!-- Adres -->
+      <div data-aos="fade-up" data-aos-delay="100" class="">
+        <div class="h-full flex flex-col text-center rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mx-auto text-brand fill-current">
+              <path d="M12 4C14.2 4 16 5.8 16 8C16 10.1 13.9 13.5 12 15.9C10.1 13.4 8 10.1 8 8C8 5.8 9.8 4 12 4M12 2C8.7 2 6 4.7 6 8C6 12.5 12 19 12 19S18 12.4 18 8C18 4.7 15.3 2 12 2M12 6C10.9 6 10 6.9 10 8S10.9 10 12 10 14 9.1 14 8 13.1 6 12 6M20 19C20 21.2 16.4 23 12 23S4 21.2 4 19C4 17.7 5.2 16.6 7.1 15.8L7.7 16.7C6.7 17.2 6 17.8 6 18.5C6 19.9 8.7 21 12 21S18 19.9 18 18.5C18 17.8 17.3 17.2 16.2 16.7L16.8 15.8C18.8 16.6 20 17.7 20 19Z"/>
             </svg>
           </div>
-          <h4>Adres</h4>
-          <p>Kochanowskiego 39<br>43-410 Zebrzydowice</p>
+          <h4 class="font-heading text-xl font-semibold mb-2">Adres</h4>
+          <p class="text-gray-700">Kochanowskiego 39<br>43-410 Zebrzydowice</p>
           <a href="https://maps.google.com/?q=Kochanowskiego+39,+43-410+Zebrzydowice" target="_blank"
-             class="inline-block mt-2 border border-brand text-brand hover:bg-brand hover:text-white text-sm font-semibold px-4 py-2 rounded">Zobacz
-            na mapie</a>
+             class="inline-block mt-3 border border-brand text-brand hover:bg-brand hover:text-white text-sm font-semibold px-4 py-2 rounded">Zobacz na mapie</a>
         </div>
       </div>
-      <div class="col-md-4 col-sm-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-        <div class="contact-box text-center">
-          <div class="icon-container mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path
-                d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
+
+      <!-- Social -->
+      <div data-aos="fade-up" data-aos-delay="200" class="">
+        <div class="h-full flex flex-col text-center rounded-lg border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition-shadow">
+          <div class="mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-12 h-12 mx-auto text-brand fill-current">
+              <path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/>
             </svg>
           </div>
-          <h4>Social Media</h4>
-          <p>
-            <a href="https://www.facebook.com/Hotelowa" target="_blank" class="social-link">Facebook</a>
-          </p>
-          <p>
-            <a href="https://www.instagram.com/restauracja.hotelowa2023" target="_blank"
-               class="social-link">Instagram</a>
-          </p>
+          <h4 class="font-heading text-xl font-semibold mb-2">Social Media</h4>
+          <p class="text-gray-700"><a href="https://www.facebook.com/Hotelowa" target="_blank" class="text-brand hover:underline">Facebook</a></p>
+          <p class="text-gray-700"><a href="https://www.instagram.com/restauracja.hotelowa2023" target="_blank" class="text-brand hover:underline">Instagram</a></p>
         </div>
       </div>
     </div>
@@ -296,38 +289,35 @@
 </section>
 
 <!-- Footer -->
-<footer>
-  <div class="container mx-auto px-4">
+<footer class="bg-gray-100 mt-16">
+  <div class="container mx-auto px-4 py-12">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-        <h4>PASS HOTEL</h4>
-        <p>Jesteśmy miejscem, gdzie wyśmienite jedzenie spotyka się z wyjątkową atmosferą. Odkryj nasze
-          perfekcyjne
-          dania i delektuj się niezapomnianymi chwilami w naszej restauracji.</p>
+      <div>
+        <h4 class="font-heading text-xl font-semibold mb-3">PASS HOTEL</h4>
+        <p class="text-gray-700">Jesteśmy miejscem, gdzie wyśmienite jedzenie spotyka się z wyjątkową atmosferą. Odkryj nasze
+          perfekcyjne dania i delektuj się niezapomnianymi chwilami w naszej restauracji.</p>
       </div>
-      <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-        <h4>Szybkie linki</h4>
-        <ul class="footer-links">
-          <li><a href="./assets/Passhotel_Bistro_Glowne.pdf" download>MENU BISTRO</a></li>
-          <li><a href="./assets/Passhotel_Menu_Okolicznosciowe.pdf" download>MENU OKOLICZNOŚCIOWE</a></li>
-          <li><a href="https://www.booking.com/hotel/pl/pass.pl.html">POKOJE HOTELOWE</a></li>
-          <li><a href="./assets/Passhotel_Catering.pdf" download>CATERING</a></li>
+      <div>
+        <h4 class="font-heading text-xl font-semibold mb-3">Szybkie linki</h4>
+        <ul class="space-y-2">
+          <li><a class="hover:underline" href="./assets/Passhotel_Bistro_Glowne.pdf" download>MENU BISTRO</a></li>
+          <li><a class="hover:underline" href="./assets/Passhotel_Menu_Okolicznosciowe.pdf" download>MENU OKOLICZNOŚCIOWE</a></li>
+          <li><a class="hover:underline" href="https://www.booking.com/hotel/pl/pass.pl.html">POKOJE HOTELOWE</a></li>
+          <li><a class="hover:underline" href="./assets/Passhotel_Catering.pdf" download>CATERING</a></li>
         </ul>
       </div>
-      <div class="col-lg-4 col-md-12">
-        <h4>Godziny otwarcia</h4>
-        <ul class="hours-list">
+      <div>
+        <h4 class="font-heading text-xl font-semibold mb-3">Godziny otwarcia</h4>
+        <ul class="text-gray-700 space-y-1">
           <li>Poniedziałek - Piątek: 11:00 - 22:00</li>
           <li>Sobota: 12:00 - 23:00</li>
           <li>Niedziela: 12:00 - 21:00</li>
         </ul>
       </div>
     </div>
-    <hr>
-    <div class="row">
-      <div class="col-md-12 text-center">
-        <p class="copyright">© 2025 PASS HOTEL. Wszelkie prawa zastrzeżone.</p>
-      </div>
+
+    <div class="mt-10 pt-6 border-t border-gray-200 text-center text-sm text-gray-600">
+      © 2025 PASS HOTEL. Wszelkie prawa zastrzeżone.
     </div>
   </div>
 </footer>
@@ -338,6 +328,56 @@
         crossorigin="anonymous"></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
+    // Toggle mobile nav
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('navbarNav');
+
+    function closeMenu() {
+      if (!navMenu.classList.contains('hidden')) {
+        navMenu.classList.add('hidden');
+        navToggle?.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function openMenu() {
+      if (navMenu.classList.contains('hidden')) {
+        navMenu.classList.remove('hidden');
+        navToggle?.setAttribute('aria-expanded', 'true');
+      }
+    }
+
+    navToggle?.addEventListener('click', () => {
+      const isHidden = navMenu.classList.contains('hidden');
+      if (isHidden) {
+        openMenu();
+      } else {
+        closeMenu();
+      }
+    });
+
+    // Close when clicking a link (after navigating)
+    navMenu?.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', () => {
+        closeMenu();
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeMenu();
+    });
+
+    // Close on click outside menu on small screens
+    document.addEventListener('click', (e) => {
+      const target = e.target;
+      const clickedInsideMenu = navMenu?.contains(target);
+      const clickedToggle = navToggle?.contains(target);
+      const isDesktop = window.matchMedia('(min-width: 1024px)').matches; // lg breakpoint
+      if (!isDesktop && !clickedInsideMenu && !clickedToggle) {
+        closeMenu();
+      }
+    });
+
     // Płynne przewijanie do sekcji
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
@@ -353,7 +393,6 @@
         }
       });
     });
-
   });
 </script>
 </body>

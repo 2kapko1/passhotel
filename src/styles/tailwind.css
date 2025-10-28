@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .nav-links a {
+    @apply text-black hover:text-brand py-2
+  }
+
+  @screen lg {
+    .nav-links li:last-child a {
+      @apply rounded-md border border-brand bg-brand px-4 py-2 text-white hover:text-brand hover:bg-transparent
+    }
+  }
+
+  .icon-container {
+    @apply flex items-center justify-center w-12 h-12 bg-brand rounded-full
+  }
+}
