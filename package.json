@@ -5,7 +5,7 @@
   "description": "PASS Hotel static site with Tailwind CSS and PostCSS build pipeline",
   "scripts": {
     "dev": "tailwindcss -i ./src/styles/tailwind.css -o ./public/css/styles.css --watch --postcss",
-    "build": "NODE_ENV=production tailwindcss -i ./src/styles/tailwind.css -o ./public/css/tailwind.css --minify --postcss"
+    "build": "NODE_ENV=production tailwindcss -i ./src/styles/tailwind.css -o ./public/css/styles.css --minify --postcss"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
