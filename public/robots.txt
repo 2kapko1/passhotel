@@ -1,0 +1,11 @@
+# robots.txt for https://passhotel.vify.pl/
+# Allow all crawlers to access the site and point them to the sitemap.
+
+User-agent: *
+Allow: /
+
+# Preferred host for crawlers that support it (e.g., Yandex, Bing)
+Host: passhotel.vify.pl
+
+# Sitemap location
+Sitemap: https://passhotel.vify.pl/sitemap.xml

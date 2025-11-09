@@ -4,17 +4,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pass Hotel - Restauracja Hotelowa</title>
+  <title>Pass Hotel Zebrzydowice – Restauracja | Hotel | Bistro | Catering</title>
 
   <link rel="stylesheet" href="css/styles.css">
   <meta name="description"
-        content="Pass Hotel - bistro, restauracja, hotel i catering w jednym miejscu">
+        content="Pass Hotel w Zebrzydowicach – restauracja, hotel, bistro i catering. Śniadania, lunche, kolacje oraz komfortowe noclegi. Sprawdź menu i zarezerwuj pobyt.">
 
-  <meta property="og:title" content="Pass Hotel - Restauracja Hotelowa">
-  <meta property="og:type" content="firma, hotel, restauracja">
-  <meta property="og:url" content="http://www.passhotel.zebrzydowice.eu/">
-  <meta property="og:image" content="/img/meta.png">
+  <!-- Canonical & robots -->
+  <link rel="canonical" href="https://passhotel.vify.pl/">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+  <!-- Internationalization -->
+  <link rel="alternate" href="https://passhotel.vify.pl/" hreflang="pl-PL">
+  <link rel="alternate" href="https://passhotel.vify.pl/" hreflang="x-default">
+
+  <!-- Keywords (optional) -->
+  <meta name="keywords" content="Pass Hotel, hotel Zebrzydowice, restauracja Zebrzydowice, bistro, catering, noclegi, sala, wydarzenia, śniadania, lunche, kolacje">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Pass Hotel - Restauracja i Hotel w Zebrzydowicach">
+  <meta property="og:description" content="Pass Hotel w Zebrzydowicach: bistro, restauracja, hotel i catering w jednym miejscu. Śniadania, lunche, kolacje i komfortowe noclegi.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://passhotel.vify.pl/">
+  <meta property="og:image" content="https://passhotel.vify.pl/img/meta.png">
   <meta property="og:locale" content="pl_PL"/>
+  <meta property="og:site_name" content="Pass Hotel">
+
+  <!-- Theming -->
+  <meta name="theme-color" content="#0f766e">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pass Hotel - Restauracja i Hotel w Zebrzydowicach">
+  <meta name="twitter:description" content="Bistro, restauracja, hotel i catering w jednym miejscu. Wyjątkowe smaki i komfortowy wypoczynek.">
+  <meta name="twitter:image" content="https://passhotel.vify.pl/img/meta.png">
+
+  <!-- Structured Data: Hotel -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    "@id": "https://passhotel.vify.pl/#hotel",
+    "name": "Pass Hotel",
+    "url": "https://passhotel.vify.pl/",
+    "image": "https://passhotel.vify.pl/img/meta.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kochanowskiego 39",
+      "postalCode": "43-410",
+      "addressLocality": "Zebrzydowice",
+      "addressRegion": "Śląskie",
+      "addressCountry": "PL"
+    },
+    "telephone": ["+48 324758046", "+48 512301727"],
+    "hasMap": "https://maps.google.com/?q=Kochanowskiego+39,+43-410+Zebrzydowice",
+    "sameAs": [
+      "https://www.facebook.com/Hotelowa",
+      "https://www.booking.com/hotel/pl/pass.pl.html"
+    ],
+    "priceRange": "$$",
+    "amenityFeature": [
+      {"@type": "LocationFeatureSpecification", "name": "Wi‑Fi", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Parking", "value": true},
+      {"@type": "LocationFeatureSpecification", "name": "Restauracja na miejscu", "value": true}
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: Restaurant -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "@id": "https://passhotel.vify.pl/#restaurant",
+    "name": "Pass Hotel – Restauracja",
+    "url": "https://passhotel.vify.pl/",
+    "image": "https://passhotel.vify.pl/img/meta.png",
+    "servesCuisine": ["Polska", "Europejska"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Kochanowskiego 39",
+      "postalCode": "43-410",
+      "addressLocality": "Zebrzydowice",
+      "addressRegion": "Śląskie",
+      "addressCountry": "PL"
+    },
+    "telephone": ["+48 512301727"],
+    "sameAs": [
+      "https://www.facebook.com/Hotelowa"
+    ]
+  }
+  </script>
+
+  <!-- Structured Data: WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Pass Hotel",
+    "url": "https://passhotel.vify.pl/"
+  }
+  </script>
 
   <link rel="icon" href="./favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="icon.png">
@@ -52,7 +142,7 @@
 </nav>
 
 <!-- Header / Start -->
-<header id="start" class="relative min-h-screen flex items-center bg-gradient-to-b from-white to-gray-50">
+<header id="start" class="relative flex items-center bg-gradient-to-b from-white to-gray-50">
   <div class="container mx-auto px-4 py-12 lg:py-24">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
       <!-- Left: Text -->
