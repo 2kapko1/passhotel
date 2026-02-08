@@ -2,18 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components {
-  .nav-links a {
-    @apply text-black hover:text-brand py-2
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
   }
 
-  @screen lg {
-    .nav-links li:last-child a {
-      @apply rounded-md border border-brand bg-brand px-4 py-2 text-white hover:text-brand hover:bg-transparent
-    }
+  .texture-linen {
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
+      repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
   }
 
-  .icon-container {
-    @apply flex items-center justify-center w-12 h-12 bg-brand rounded-full
+  .img-warm {
+    filter: sepia(0.12) contrast(1.08) brightness(1.02);
+  }
+
+  .serif-bold {
+    font-weight: 800;
+  }
+
+  .label-sans {
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    font-size: 0.7rem;
   }
 }

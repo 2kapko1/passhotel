@@ -3,21 +3,42 @@ module.exports = {
   content: [
     "./public/**/*.html"
   ],
+  darkMode: "class",
   theme: {
     extend: {
-      fontFamily: {
-        // Reuse Google Fonts already loaded in index.html
-        heading: ['"Exo 2"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        body: ['"Alegreya Sans"', 'ui-sans-serif', 'system-ui', 'sans-serif']
-      },
       colors: {
-        brand: {
-          DEFAULT: '#a87d32',
-          dark: '#8f6a2b'
+        primary: "#A65D43",
+        "background-light": "#FDFBF7",
+        "background-dark": "#1A1A1A",
+        "earthy-green": "#4A5D4E",
+        "warm-gray": "#E5E1DA"
+      },
+      fontFamily: {
+        display: ["Playfair Display", "serif"],
+        sans: ["Plus Jakarta Sans", "sans-serif"]
+      },
+      borderRadius: {
+        DEFAULT: "0.75rem",
+        xl: "1.5rem",
+        "2xl": "2.5rem",
+        "3xl": "3rem"
+      },
+      animation: {
+        "float-slow": "float 8s ease-in-out infinite",
+        "float-slower": "float 10s ease-in-out infinite reverse",
+        "organic-float": "organic 15s ease-in-out infinite alternate"
+      },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-20px)" }
         },
-        secondary: '#333333',
-        light: '#f8f9fa',
-        dark: '#212529'
+        organic: {
+          "0%": { transform: "translate(0, 0) scale(1)" },
+          "33%": { transform: "translate(30px, -50px) scale(1.1)" },
+          "66%": { transform: "translate(-20px, 20px) scale(0.9)" },
+          "100%": { transform: "translate(0, 0) scale(1)" }
+        }
       }
     }
   },
