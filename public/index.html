@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pass Hotel Zebrzydowice – Restauracja | Hotel | Bistro | Catering</title>
 
-  <link rel="stylesheet" href="css/styles.css">
   <meta name="description"
         content="Pass Hotel w Zebrzydowicach – restauracja, hotel, bistro i catering. Śniadania, lunche, kolacje oraz komfortowe noclegi. Sprawdź menu i zarezerwuj pobyt.">
 
@@ -114,11 +113,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet">
 
+  <!-- Load our Tailwind build after external font/icon styles so utilities like `hidden` win in the cascade. -->
+  <link rel="stylesheet" href="css/styles.css">
+
 </head>
 
 <body class="bg-background-light dark:bg-background-dark text-stone-800 dark:text-stone-100 font-sans transition-colors duration-300 overflow-x-hidden">
 <nav class="sticky top-0 z-50 bg-background-light/90 dark:bg-background-dark/90 backdrop-blur-md border-b border-stone-200 dark:border-stone-800 transition-all duration-300">
-  <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+  <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
     <div class="flex items-center gap-2">
       <a class="font-display text-3xl font-black tracking-tighter text-primary" href="#start">PASS HOTEL</a>
     </div>
@@ -129,14 +131,36 @@
       <a class="hover:text-primary transition-colors" href="#catering">Catering</a>
     </div>
     <div class="flex items-center gap-4">
-      <a class="bg-primary hover:bg-[#8e4d35] text-white px-8 py-3 rounded-full label-sans uppercase transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5" href="#kontakt">
+      <a class="hidden md:inline-flex bg-primary hover:bg-[#8e4d35] text-white px-8 py-3 rounded-full label-sans uppercase transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5" href="#kontakt">
         Kontakt
       </a>
+
+      <button
+        id="mobile-menu-button"
+        class="md:hidden inline-flex items-center justify-center w-12 h-12 rounded-full border border-stone-200 dark:border-stone-800 bg-white/60 dark:bg-stone-900/40 hover:bg-white dark:hover:bg-stone-900 transition-colors"
+        type="button"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+      >
+        <span id="mobile-menu-icon-open" class="material-symbols-outlined text-2xl text-stone-700 dark:text-stone-200">menu</span>
+        <span id="mobile-menu-icon-close" class="material-symbols-outlined text-2xl text-stone-700 dark:text-stone-200 hidden">close</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="mobile-menu" class="md:hidden hidden px-6 pb-8 pt-4 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md border-t border-stone-200 dark:border-stone-800">
+    <div class="flex flex-col gap-2 label-sans uppercase text-stone-600 dark:text-stone-300">
+      <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 dark:hover:bg-stone-800/60 transition-colors" href="#bistro">Bistro</a>
+      <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 dark:hover:bg-stone-800/60 transition-colors" href="#restauracja">Restauracja</a>
+      <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 dark:hover:bg-stone-800/60 transition-colors" href="#hotel">Hotel</a>
+      <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 dark:hover:bg-stone-800/60 transition-colors" href="#catering">Catering</a>
+      <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 dark:hover:bg-stone-800/60 transition-colors" href="#kontakt">Kontakt</a>
     </div>
   </div>
 </nav>
 
-<section id="start" class="relative py-20 md:py-32 overflow-hidden">
+<section id="start" class="relative py-12 md:py-32 overflow-hidden">
   <div class="absolute -top-24 -right-24 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] animate-organic-float"></div>
   <div class="absolute top-1/3 -left-24 w-[500px] h-[500px] bg-earthy-green/10 rounded-full blur-[100px] animate-float-slower"></div>
   <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
@@ -170,7 +194,7 @@
   </div>
 </section>
 
-<section class="py-24 bg-stone-50 dark:bg-stone-900/50 relative z-10" id="bistro">
+<section class="py-12 md:py-24 bg-stone-50 dark:bg-stone-900/50 relative z-10" id="bistro">
   <div class="max-w-7xl mx-auto px-6">
     <div class="flex flex-col lg:flex-row gap-20 items-center">
       <div class="w-full lg:w-1/2 relative group">
@@ -184,7 +208,7 @@
           Nasze menu to kulinarna podróż przez smaki, które znasz i kochasz, podane w nowoczesnej odsłonie. Od ręcznie robionych makaronów po burgery z najwyższej jakości wołowiny.
         </p>
         <div class="grid grid-cols-1 gap-6">
-          <a class="flex items-center justify-between p-8 bg-white dark:bg-stone-800 rounded-3xl border border-stone-100 dark:border-stone-700 shadow-sm hover:border-primary/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" href="./assets/Passhotel_Bistro_Glowne.pdf" download>
+          <a class="flex items-center justify-between p-8 bg-white dark:bg-stone-800 rounded-3xl border border-stone-100 dark:border-stone-700 shadow-sm hover:border-primary/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" href="./assets/Passhotel_Bistro_Glowne.pdf" target="_blank">
             <div class="flex flex-col">
               <span class="font-display serif-bold text-2xl text-stone-800 dark:text-white mb-1">Karta Główna</span>
               <span class="label-sans uppercase text-stone-400">Pełne Menu</span>
@@ -193,7 +217,7 @@
               <span class="material-symbols-outlined text-2xl">restaurant_menu</span>
             </div>
           </a>
-          <a class="flex items-center justify-between p-8 bg-white dark:bg-stone-800 rounded-3xl border border-stone-100 dark:border-stone-700 shadow-sm hover:border-primary/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" href="./assets/Passhotel_Bistro_Skrocone.pdf" download>
+          <a class="flex items-center justify-between p-8 bg-white dark:bg-stone-800 rounded-3xl border border-stone-100 dark:border-stone-700 shadow-sm hover:border-primary/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" href="./assets/Passhotel_Bistro_Skrocone.pdf" target="_blank">
             <div class="flex flex-col">
               <span class="font-display serif-bold text-2xl text-stone-800 dark:text-white mb-1">Oferta Niedzielna</span>
               <span class="label-sans uppercase text-stone-400">Specjalne pozycje</span>
@@ -202,7 +226,7 @@
               <span class="material-symbols-outlined text-2xl">calendar_today</span>
             </div>
           </a>
-          <a class="flex items-center justify-between p-8 bg-white dark:bg-stone-800 rounded-3xl border border-stone-100 dark:border-stone-700 shadow-sm hover:border-primary/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" href="./assets/Passhotel_Bistro_Napoje.pdf" download>
+          <a class="flex items-center justify-between p-8 bg-white dark:bg-stone-800 rounded-3xl border border-stone-100 dark:border-stone-700 shadow-sm hover:border-primary/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" href="./assets/Passhotel_Bistro_Napoje.pdf" target="_blank">
             <div class="flex flex-col">
               <span class="font-display serif-bold text-2xl text-stone-800 dark:text-white mb-1">Karta Drinków &amp; Napojów</span>
               <span class="label-sans uppercase text-stone-400">Drinki i kawa</span>
@@ -232,7 +256,7 @@
         <p class="text-stone-600 dark:text-stone-400 text-lg mb-10 leading-relaxed font-light">
           Przestrzeń stworzona do celebrowania ważnych chwil. Nasza sala restauracyjna to połączenie elegancji z ciepłą atmosferą, idealna na wesela, chrzciny czy firmowe bankiety.
         </p>
-        <a class="bg-earthy-green text-white px-10 py-5 rounded-full label-sans uppercase hover:bg-opacity-90 transition-all inline-flex items-center gap-4 shadow-xl hover:shadow-2xl hover:-translate-y-1" href="./assets/Passhotel_Menu_Okolicznosciowe.pdf" download>
+        <a class="bg-earthy-green text-white px-10 py-5 rounded-full label-sans uppercase hover:bg-opacity-90 transition-all inline-flex items-center gap-4 shadow-xl hover:shadow-2xl hover:-translate-y-1" href="./assets/Passhotel_Menu_Okolicznosciowe.pdf" target="_blank">
           Menu Okolicznościowe
           <span class="material-symbols-outlined text-lg">download</span>
         </a>
@@ -277,8 +301,8 @@
         <p class="text-white/70 text-lg mb-12 max-w-lg font-light leading-relaxed">
           Przenosimy jakość naszej restauracji w dowolne miejsce. Profesjonalna obsługa i wyśmienite dania, które zachwycą Twoich gości.
         </p>
-        <a class="bg-white text-earthy-green px-10 py-5 rounded-full label-sans uppercase hover:bg-stone-100 transition-all inline-flex items-center gap-4 shadow-lg hover:shadow-white/20 hover:-translate-y-1" href="./assets/Passhotel_Catering.pdf" download>
-          Pobierz Ofertę
+        <a class="bg-white text-earthy-green px-10 py-5 rounded-full label-sans uppercase hover:bg-stone-100 transition-all inline-flex items-center gap-4 shadow-lg hover:shadow-white/20 hover:-translate-y-1" href="./assets/Passhotel_Catering.pdf" target="_blank">
+          Sprawdź Ofertę
           <span class="material-symbols-outlined text-lg">picture_as_pdf</span>
         </a>
       </div>
@@ -305,7 +329,7 @@
             <span class="material-symbols-outlined text-4xl">phone_iphone</span>
           </div>
           <div class="w-full">
-            <h3 class="font-display serif-bold text-3xl mb-4">Rezerwacje</h3>
+            <h3 class="font-display serif-bold text-3xl mb-4">Telefon</h3>
             <div class="space-y-4 text-stone-600 dark:text-stone-400 text-lg">
               <p class="flex justify-between border-b border-stone-50 pb-2"><span>Bistro:</span> <a class="hover:text-primary transition-colors serif-bold" href="tel:+48512301727">512 301 727</a></p>
               <p class="flex justify-between border-b border-stone-50 pb-2"><span>Hotel:</span> <a class="hover:text-primary transition-colors serif-bold" href="tel:+48324758046">32 475 80 46</a></p>
@@ -389,10 +413,42 @@
       </div>
     </div>
     <div class="pt-12 border-t border-stone-800/50 text-[10px] text-center label-sans uppercase gap-6 opacity-40">
-      <p>© 2026 PASS HOTEL. DESIGNED BY VISITIFY</p>
+      <p>© 2026 PASS HOTEL. DESIGNED BY <a class="underline hover:text-primary transition-colors" href="https://www.visitify.pl/">VISITIFY</a></p>
     </div>
   </div>
 </footer>
+
+<script>
+  (() => {
+    const button = document.getElementById('mobile-menu-button');
+    const menu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('mobile-menu-icon-open');
+    const iconClose = document.getElementById('mobile-menu-icon-close');
+
+    if (!button || !menu || !iconOpen || !iconClose) return;
+
+    const setOpen = (open) => {
+      menu.classList.toggle('hidden', !open);
+      button.setAttribute('aria-expanded', String(open));
+      button.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      iconOpen.classList.toggle('hidden', open);
+      iconClose.classList.toggle('hidden', !open);
+    };
+
+    button.addEventListener('click', () => {
+      const isOpen = button.getAttribute('aria-expanded') === 'true';
+      setOpen(!isOpen);
+    });
+
+    menu.querySelectorAll('a[href^="#"]').forEach((link) => {
+      link.addEventListener('click', () => setOpen(false));
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') setOpen(false);
+    });
+  })();
+</script>
 
 </body>
 </html>
