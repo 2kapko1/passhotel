@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #A65D43;
+  --color-background-light: #FDFBF7;
+  --color-background-dark: #1A1A1A;
+  --color-earthy-green: #4A5D4E;
+  --color-warm-gray: #E5E1DA;
+
+  --font-display: "Playfair Display", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+
+  --radius-default: 0.75rem;
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2.5rem;
+  --radius-3xl: 3rem;
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes organic {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -50px) scale(1.1); }
+    66% { transform: translate(-20px, 20px) scale(0.9); }
+    100% { transform: translate(0, 0) scale(1); }
+  }
+
+  --animate-float-slow: float 8s ease-in-out infinite;
+  --animate-float-slower: float 10s ease-in-out infinite reverse;
+  --animate-organic-float: organic 15s ease-in-out infinite alternate;
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@utility texture-linen {
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
+    repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
+}
+
+@utility img-warm {
+  filter: sepia(0.12) contrast(1.08) brightness(1.02);
+}
+
+@utility serif-bold {
+  font-weight: 800;
+}
+
+@utility label-sans {
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  font-size: 0.7rem;
+}

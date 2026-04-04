@@ -1,0 +1,346 @@
+---
+import Layout from '../layouts/Layout.astro';
+import pdfManifest from '../data/pdf-manifest.json';
+---
+
+<Layout
+  title="Pass Hotel Zebrzydowice – Restauracja | Hotel | Bistro | Catering"
+  description="Pass Hotel w Zebrzydowicach – restauracja, hotel, bistro i catering. Śniadania, lunche, kolacje oraz komfortowe noclegi. Sprawdź menu i zarezerwuj pobyt."
+>
+  <nav class="sticky top-0 z-50 bg-background-light/90 backdrop-blur-md border-b border-stone-200 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 md:h-24 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <a class="font-display text-3xl font-black tracking-tighter text-primary" href="#start">PASS HOTEL</a>
+      </div>
+      <div class="hidden md:flex items-center gap-10 label-sans uppercase text-stone-500">
+        <a class="hover:text-primary transition-colors" href="#bistro">Bistro</a>
+        <a class="hover:text-primary transition-colors" href="#restauracja">Restauracja</a>
+        <a class="hover:text-primary transition-colors" href="#hotel">Hotel</a>
+        <a class="hover:text-primary transition-colors" href="#catering">Catering</a>
+      </div>
+      <div class="flex items-center gap-4">
+        <a class="hidden md:inline-flex bg-primary hover:bg-[#8e4d35] text-white px-8 py-3 rounded-full label-sans uppercase transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:-translate-y-0.5" href="#kontakt">
+          Kontakt
+        </a>
+
+        <button
+          id="mobile-menu-button"
+          class="md:hidden inline-flex items-center justify-center w-12 h-12 rounded-full border border-stone-200 bg-white/60 hover:bg-white transition-colors"
+          type="button"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span id="mobile-menu-icon-open" class="material-symbols-outlined text-2xl text-stone-700 !block">menu</span>
+          <span id="mobile-menu-icon-close" class="material-symbols-outlined text-2xl text-stone-700 !hidden">close</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden px-6 pb-8 pt-4 bg-background-light/95 backdrop-blur-md border-t border-stone-200">
+      <div class="flex flex-col gap-2 label-sans uppercase text-stone-600">
+        <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 transition-colors" href="#bistro">Bistro</a>
+        <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 transition-colors" href="#restauracja">Restauracja</a>
+        <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 transition-colors" href="#hotel">Hotel</a>
+        <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 transition-colors" href="#catering">Catering</a>
+        <a class="rounded-2xl px-4 py-4 hover:bg-stone-100/70 transition-colors" href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="start" class="relative py-12 md:py-32 overflow-hidden">
+    <div class="absolute -top-24 -right-24 w-[600px] h-[600px] bg-primary/10 rounded-full blur-[120px] animate-organic-float"></div>
+    <div class="absolute top-1/3 -left-24 w-[500px] h-[500px] bg-earthy-green/10 rounded-full blur-[100px] animate-float-slower"></div>
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
+      <div class="order-2 lg:order-1 lg:col-span-5 relative z-10">
+        <h1 class="font-display text-6xl md:text-7xl lg:text-8xl leading-[0.85] mb-8 text-balance text-stone-900 serif-bold">
+          Smak &amp; Relaks<br/>
+          <span class="block text-3xl md:text-4xl lg:text-5xl mt-6 font-normal text-stone-500">w sercu</span>
+          <span class="block text-primary italic font-black mt-2 relative -ml-2 text-6xl tracking-tight">Zebrzydowic</span>
+        </h1>
+        <p class="text-lg md:text-xl text-stone-600 mb-10 max-w-lg leading-relaxed font-light">
+          Odkryj miejsce, gdzie nowoczesne bistro spotyka się z hotelową elegancją. Tworzymy wspomnienia smakiem i komfortem.
+        </p>
+        <div class="flex flex-wrap gap-5">
+          <a
+            class="flex items-center justify-center bg-stone-900 text-white px-10 py-4 rounded-full label-sans uppercase hover:scale-105 transition-transform shadow-xl hover:shadow-2xl"
+            href="#bistro">Odkryj Menu</a>
+          <a
+            class="group flex items-center justify-center gap-2 px-6 py-4 rounded-full label-sans uppercase text-stone-600 hover:text-primary transition-colors"
+            href="#hotel">
+            Zarezerwuj pokój <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2 lg:col-span-7 relative h-[600px] md:h-[750px] w-full mt-12 lg:mt-0">
+        <div class="absolute top-0 right-0 w-[85%] h-[75%] rounded-[4rem] overflow-hidden shadow-2xl z-10 border-8 border-white transform hover:scale-[1.02] transition-transform duration-700">
+          <img alt="Bistro Interior" class="w-full h-full object-cover img-warm" src="/img/hero_1.jpg"/>
+        </div>
+        <div class="absolute bottom-10 left-0 w-3/4 h-[55%] rounded-[3.5rem] overflow-hidden shadow-2xl z-20 border-8 border-white transform -rotate-3 hover:rotate-0 transition-transform duration-700">
+          <img alt="Gourmet Dish" class="w-full h-full object-cover img-warm" src="/img/hero_2.jpg"/>
+        </div>
+        <div class="absolute top-20 -left-10 w-56 h-56 rounded-[3rem] overflow-hidden shadow-2xl z-30 border-8 border-background-light hidden md:block animate-float-slow rotate-6">
+          <img alt="Detail" class="w-full h-full object-cover img-warm" src="/img/hero_3.jpg"/>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-24 bg-stone-50 relative z-10" id="bistro">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row gap-20 items-center">
+        <div class="w-full lg:w-1/2 relative group">
+          <div class="absolute inset-0 bg-primary/20 rounded-[2rem] translate-x-4 translate-y-4 -z-10 transition-transform group-hover:translate-x-8 group-hover:translate-y-8"></div>
+          <img alt="Our Bistro" class="rounded-[3rem] shadow-2xl w-full h-[650px] object-cover img-warm" src="/img/bistro.jpg"/>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-primary label-sans uppercase mb-6 block">Smaczny Posiłek</span>
+          <h2 class="font-display text-5xl md:text-6xl serif-bold mb-8 text-stone-900">Bistro Pass</h2>
+          <p class="text-stone-600 text-lg mb-10 leading-relaxed font-light">
+            Nasze menu to kulinarna podróż przez smaki, które znasz i kochasz, podane w nowoczesnej odsłonie. Od ręcznie robionych makaronów po burgery z najwyższej jakości wołowiny.
+          </p>
+          <div class="grid grid-cols-1 gap-6">
+            <a class="flex items-center justify-between p-8 bg-white rounded-3xl border border-stone-100 shadow-sm hover:border-primary/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" href={pdfManifest['menu-glowne']} target="_blank">
+              <div class="flex flex-col">
+                <span class="font-display serif-bold text-2xl text-stone-800 mb-1">Karta Główna</span>
+                <span class="label-sans uppercase text-stone-400">Pełne Menu</span>
+              </div>
+              <div class="w-14 h-14 rounded-full bg-stone-100 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-2xl">restaurant_menu</span>
+              </div>
+            </a>
+            <a class="flex items-center justify-between p-8 bg-white rounded-3xl border border-stone-100 shadow-sm hover:border-primary/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" href={pdfManifest['menu-skrocone']} target="_blank">
+              <div class="flex flex-col">
+                <span class="font-display serif-bold text-2xl text-stone-800 mb-1">Oferta Niedzielna</span>
+                <span class="label-sans uppercase text-stone-400">Specjalne pozycje</span>
+              </div>
+              <div class="w-14 h-14 rounded-full bg-stone-100 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-2xl">calendar_today</span>
+              </div>
+            </a>
+            <a class="flex items-center justify-between p-8 bg-white rounded-3xl border border-stone-100 shadow-sm hover:border-primary/50 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group cursor-pointer" href={pdfManifest['napoje']} target="_blank">
+              <div class="flex flex-col">
+                <span class="font-display serif-bold text-2xl text-stone-800 mb-1">Karta Drinków i Napojów</span>
+                <span class="label-sans uppercase text-stone-400">Wina, kawy, drinki</span>
+              </div>
+              <div class="w-14 h-14 rounded-full bg-stone-100 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-2xl">local_bar</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 bg-stone-900/5 relative overflow-hidden" id="restauracja">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col lg:flex-row-reverse gap-20 items-center">
+        <div class="w-full lg:w-1/2">
+          <div class="relative">
+            <div class="absolute inset-0 border-2 border-primary/30 rounded-[3rem] rotate-3 translate-x-2 translate-y-2"></div>
+            <img alt="Elegant Dining" class="rounded-[3.5rem] shadow-2xl w-full h-[550px] object-cover relative z-10 img-warm" src="/img/restaurant.jpg"/>
+          </div>
+        </div>
+        <div class="w-full lg:w-1/2">
+          <span class="text-primary label-sans uppercase mb-6 block">Przyjęcia i Spotkania</span>
+          <h2 class="font-display text-5xl md:text-6xl serif-bold mb-8 text-stone-900">Restauracja</h2>
+          <p class="text-stone-600 text-lg mb-10 leading-relaxed font-light">
+            Przestrzeń stworzona do celebrowania ważnych chwil. Nasza sala restauracyjna to połączenie elegancji z ciepłą atmosferą, idealna na wesela, chrzciny czy firmowe bankiety.
+          </p>
+          <a class="bg-earthy-green text-white px-10 py-5 rounded-full label-sans uppercase hover:bg-opacity-90 transition-all inline-flex items-center gap-4 shadow-xl hover:shadow-2xl hover:-translate-y-1" href={pdfManifest['menu-okolicznosciowe']} target="_blank">
+            Menu Okolicznościowe
+            <span class="material-symbols-outlined text-lg">download</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-32 bg-warm-gray/30" id="hotel">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <span class="text-primary label-sans uppercase mb-4 block">Komfortowy Wypoczynek</span>
+      <h2 class="font-display text-5xl md:text-6xl serif-bold mb-20 text-stone-900">Pokoje Hotelowe</h2>
+      <div class="max-w-4xl mx-auto bg-white rounded-[3rem] overflow-hidden shadow-2xl border-[6px] border-primary relative transform hover:scale-[1.01] transition-transform duration-500">
+        <div class="grid grid-cols-1 md:grid-cols-2">
+          <div class="h-80 md:h-full relative overflow-hidden">
+            <img alt="Apartament Deluxe" class="w-full h-full object-cover hover:scale-110 transition-transform duration-1000 img-warm" src="/img/hotel.jpeg"/>
+          </div>
+          <div class="p-12 text-left flex flex-col justify-center">
+            <h3 class="font-display serif-bold text-3xl md:text-4xl mb-3 text-primary">Apartament Deluxe</h3>
+            <p class="text-stone-600 text-lg mb-8 leading-relaxed">Najwyższy standard i przestrzeń dla gości oczekujących luksusu. Nasz flagowy pokój oferuje niezapomniany komfort.</p>
+            <ul class="space-y-4 mb-10 label-sans uppercase text-stone-700">
+              <li class="flex items-center gap-3"><span class="material-symbols-outlined text-xl text-primary">fork_spoon</span> Śniadania w cenie</li>
+              <li class="flex items-center gap-3"><span class="material-symbols-outlined text-xl text-primary">local_parking</span> Bezpłatny parking</li>
+              <li class="flex items-center gap-3"><span class="material-symbols-outlined text-xl text-primary">king_bed</span> Pokoje rodzinne</li>
+              <li class="flex items-center gap-3"><span class="material-symbols-outlined text-xl text-primary">wifi</span> Szybkie Wi-Fi</li>
+            </ul>
+            <a class="w-full inline-block text-center py-5 rounded-2xl bg-primary text-white label-sans uppercase hover:bg-[#8e4d35] shadow-xl shadow-primary/40 transition-all hover:-translate-y-1" href="https://www.booking.com/hotel/pl/pass.pl.html" target="_blank" rel="noopener">Zarezerwuj teraz</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24" id="catering">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-earthy-green texture-linen rounded-[4rem] p-12 md:p-24 relative overflow-hidden flex flex-col lg:flex-row items-center gap-16 shadow-[0_50px_100px_-20px_rgba(74,93,78,0.3)] border border-white/5">
+        <div class="absolute -top-40 -left-40 w-96 h-96 border border-white/5 rounded-full animate-organic-float"></div>
+        <div class="absolute bottom-20 right-1/4 w-80 h-80 border border-white/5 rounded-full animate-float-slower"></div>
+        <div class="flex-1 text-white z-10 relative">
+          <h2 class="font-display text-5xl md:text-7xl serif-bold mb-8 leading-[1.1]">Catering na Każdą Okazję</h2>
+          <p class="text-white/70 text-lg mb-12 max-w-lg font-light leading-relaxed">
+            Przenosimy jakość naszej restauracji w dowolne miejsce. Profesjonalna obsługa i wyśmienite dania, które zachwycą Twoich gości.
+          </p>
+          <a class="bg-white text-earthy-green px-10 py-5 rounded-full label-sans uppercase hover:bg-stone-100 transition-all inline-flex items-center gap-4 shadow-lg hover:shadow-white/20 hover:-translate-y-1" href={pdfManifest['catering']} target="_blank">
+            Sprawdź Ofertę
+            <span class="material-symbols-outlined text-lg">picture_as_pdf</span>
+          </a>
+        </div>
+        <div class="flex-1 w-full max-w-lg relative z-10">
+          <div class="relative group">
+            <div class="absolute inset-0 border-2 border-white/20 rounded-[3rem] rotate-6 translate-x-4 translate-y-4 group-hover:rotate-0 transition-transform duration-700"></div>
+            <img alt="Catering Food" class="rounded-[3rem] shadow-3xl transform -rotate-2 w-full h-[500px] object-cover img-warm group-hover:rotate-0 transition-transform duration-700" src="/img/catering.png"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-stone-900 text-white pt-24 pb-12" id="kontakt">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 mb-20">
+        <div>
+          <h2 class="font-display text-6xl md:text-7xl serif-bold mb-12 leading-tight">
+            Zapraszamy do <br/>
+            <span class="text-primary italic">Kontaktu</span>
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+              <div>
+                <span class="text-stone-500 label-sans uppercase block mb-4">Telefon</span>
+                <div class="space-y-2">
+                  <a href="tel:+48324758046"
+                     class="text-xl font-light hover:text-primary transition-colors flex justify-between">
+                    <span>Hotel:</span>
+                    <span>32 475 80 46</span>
+                  </a>
+                  <a href="tel:+48512301727"
+                     class="text-xl font-light hover:text-primary transition-colors flex justify-between">
+                    <span>Bistro:</span>
+                    <span>512 301 727</span>
+                  </a>
+                  <a href="tel:+48519055122"
+                     class="text-xl font-light hover:text-primary transition-colors flex justify-between">
+                    <span>Menedżer:</span>
+                    <span>519 055 122</span>
+                  </a>
+                </div>
+              </div>
+              <div>
+                <span class="text-stone-500 label-sans uppercase block mb-4">Adres</span>
+                <p class="text-xl font-light">Kochanowskiego 39<br/>43-410 Zebrzydowice</p>
+              </div>
+            </div>
+            <div class="space-y-8">
+              <div>
+                <span class="text-stone-500 label-sans uppercase block mb-4">Godziny Bistro</span>
+                <div class="space-y-2">
+                  <div class="flex justify-between text-xl font-light">
+                    <span>Pon - Pt:</span>
+                    <span>11:00 - 22:00</span>
+                  </div>
+                  <div class="flex justify-between text-xl font-light">
+                    <span>Sobota:</span>
+                    <span>12:00 - 23:00</span>
+                  </div>
+                  <div class="flex justify-between text-xl font-light">
+                    <span>Niedziela:</span>
+                    <span>12:00 - 21:00</span>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span class="text-stone-500 label-sans uppercase block mb-4">Socjale</span>
+                <div class="flex space-x-4">
+                  <a href="https://www.facebook.com/Hotelowa" target="_blank" class="w-14 h-14 rounded-full border border-stone-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
+                    <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                  </a>
+                  <a href="https://www.instagram.com/restauracja.hotelowa2023" target="_blank" class="w-14 h-14 rounded-full border border-stone-800 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
+                    <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="rounded-[3rem] overflow-hidden grayscale contrast-125 opacity-70 hover:opacity-100 transition-opacity duration-700 h-[500px] border border-stone-800">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2558.117621935832!2d18.6111111!3d49.8888889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47141ec6f43e62f7%3A0x6c6e0996841b80d0!2sKochanowskiego+39%2C+43-410+Zebrzydowice!5e0!3m2!1spl!2spl!4v1709220000000!5m2!1spl!2spl"
+            width="100%"
+            height="100%"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+          ></iframe>
+        </div>
+      </div>
+      <div class="pt-12 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-6 text-stone-500 label-sans uppercase text-sm tracking-widest">
+        <p>© 2026 Pass Hotel. Wszelkie prawa zastrzeżone.</p>
+        <p>Created by <a href="https://vify.pl" target="_blank" class="hover:text-primary transition-colors">VIFY</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script is:inline>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileMenuIconOpen = document.getElementById('mobile-menu-icon-open');
+    const mobileMenuIconClose = document.getElementById('mobile-menu-icon-close');
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener('click', () => {
+        const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+        mobileMenuButton.setAttribute('aria-expanded', !isExpanded);
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+
+        if (isExpanded) {
+          mobileMenuIconOpen.classList.replace('!hidden', '!block');
+          mobileMenuIconClose.classList.replace('!block', '!hidden');
+        } else {
+          mobileMenuIconOpen.classList.replace('!block', '!hidden');
+          mobileMenuIconClose.classList.replace('!hidden', '!block');
+        }
+      });
+
+      // Close menu on link click
+      const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+      mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          mobileMenuButton.setAttribute('aria-expanded', 'false');
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('flex');
+          mobileMenuIconOpen.classList.replace('!hidden', '!block');
+          mobileMenuIconClose.classList.replace('!block', '!hidden');
+        });
+      });
+    }
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+
+        const targetElement = document.querySelector(href);
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</Layout>
