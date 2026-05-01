@@ -4,3 +4,4 @@
 /src/data/pdf-manifest.json
 public/
 .astro/
+.npm-cache
